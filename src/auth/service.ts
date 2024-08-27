@@ -15,6 +15,7 @@ interface UserData {
   employeeId?: string;
   dateOfBirth?: Date;
   department?: string;
+  experience?: number | string;
 }
 
 interface LoginResult {
@@ -44,7 +45,7 @@ class AuthService {
           name: userData.name,
           specialty: userData.specialty,
           department: userData.department,
-          experience: 0, // You might want to add this to UserData if needed
+          experience: userData.experience, // You might want to add this to UserData if needed
           contact: userData.email,
           avatar: '', // You can set a default avatar or leave it empty
         };

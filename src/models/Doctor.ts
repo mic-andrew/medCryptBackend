@@ -5,7 +5,7 @@ export interface IDoctor extends Document {
   name: string;
   department: string;
   specialty: string;
-  experience: number;
+  experience: number | string;
   contact: string;
   avatar?: string;
   patients: mongoose.Types.ObjectId[];
